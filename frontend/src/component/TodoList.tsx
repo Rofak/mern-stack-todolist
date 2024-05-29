@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 library.add(faTrash, faPenToSquare, faFloppyDisk);
 export function TodoList(props: any) {
-  const BASE_URL = 'http://localhost:3000/api';
+  const BASE_URL = import.meta.env.VITE_BASE_URL
   const [isEdit, setIsEdit] = useState<any>(false);
   const [completed, setCompleted] = useState(false);
   const [title, setTitle] = useState('');

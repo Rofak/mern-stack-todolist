@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TodoList } from './component/TodoList.tsx';
 function App() {
-  const BASE_URL = 'http://localhost:3000/api';
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
   const [todos, setTodos] = useState<any[]>([]);
   const [title, setTitle] = useState('');
   const [todoCompleted, setTodoCompleted] = useState<any>([]);
